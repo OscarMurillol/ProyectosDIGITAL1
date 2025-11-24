@@ -1,0 +1,193 @@
+$date
+	Mon Nov 24 06:46:26 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_division_entera $end
+$var wire 1 ! done $end
+$var wire 8 " R [7:0] $end
+$var wire 8 # Q [7:0] $end
+$var parameter 32 $ N $end
+$var reg 8 % A [7:0] $end
+$var reg 8 & B [7:0] $end
+$var reg 1 ' clk $end
+$var reg 1 ( rst $end
+$var reg 1 ) start $end
+$scope module dut $end
+$var wire 8 * A [7:0] $end
+$var wire 8 + B [7:0] $end
+$var wire 1 ' clk $end
+$var wire 1 ( rst $end
+$var wire 1 ) start $end
+$var wire 8 , upper_part [7:0] $end
+$var wire 16 - shifted_A [15:0] $end
+$var wire 16 . next_A_val [15:0] $end
+$var wire 8 / diff [7:0] $end
+$var wire 1 0 cabe $end
+$var parameter 2 1 CALC $end
+$var parameter 2 2 DONE $end
+$var parameter 2 3 IDLE $end
+$var parameter 32 4 N $end
+$var reg 16 5 A_ext [15:0] $end
+$var reg 8 6 B_reg [7:0] $end
+$var reg 8 7 Q [7:0] $end
+$var reg 8 8 R [7:0] $end
+$var reg 8 9 count [7:0] $end
+$var reg 1 ! done $end
+$var reg 2 : state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 4
+b0 3
+b10 2
+b1 1
+b1000 $
+$end
+#0
+$dumpvars
+b0 :
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+10
+b0 /
+b1 .
+b0 -
+b0 ,
+b0 +
+b0 *
+0)
+1(
+0'
+b0 &
+b0 %
+b0 #
+b0 "
+0!
+$end
+#5000
+1'
+#10000
+0'
+#15000
+1'
+#20000
+0'
+0(
+#25000
+1'
+#30000
+0'
+#35000
+1'
+#40000
+0'
+1)
+b100 &
+b100 +
+b1111 %
+b1111 *
+#45000
+b11110 -
+b11110 .
+b1 :
+b1111 5
+b1000 9
+00
+b11111100 /
+b100 6
+1'
+#50000
+0'
+0)
+#55000
+b111100 .
+b111100 -
+b111 9
+b11110 5
+1'
+#60000
+0'
+#65000
+b1111000 .
+b1111000 -
+b110 9
+b111100 5
+1'
+#70000
+0'
+#75000
+b11110000 .
+b11110000 -
+b101 9
+b1111000 5
+1'
+#80000
+0'
+#85000
+b11111101 /
+b1 ,
+b111100000 .
+b111100000 -
+b100 9
+b11110000 5
+1'
+#90000
+0'
+#95000
+b11111111 /
+b11 ,
+b1111000000 .
+b1111000000 -
+b11 9
+b111100000 5
+1'
+#100000
+0'
+#105000
+10
+b11 /
+b111 ,
+b1110000001 .
+b11110000000 -
+b10 9
+b1111000000 5
+1'
+#110000
+0'
+#115000
+b1100000011 .
+b11100000010 -
+b1 9
+b1110000001 5
+1'
+#120000
+0'
+#125000
+b1000000111 .
+b10 /
+b110 ,
+b11000000110 -
+b10 :
+b0 9
+b1100000011 5
+1'
+#130000
+0'
+#135000
+b0 :
+b11 "
+b11 8
+b11 #
+b11 7
+1!
+1'
