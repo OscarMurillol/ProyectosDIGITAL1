@@ -4,5 +4,6 @@ Diseño e implementación de una calculadora capaz de realizar operaciones bási
 Prueba Division FPGA:
 https://youtu.be/6cxFfCsGUvk
 
-Oscar Miguel Murillo Loreo  No. SIA 2180209716 
+Oscar Miguel Murillo Loreo  No. SIA 2180209716
+
 David Felipe Zorro Pulido   No. SIA 2179771396 
