@@ -7,3 +7,5 @@ https://youtu.be/6cxFfCsGUvk
 Oscar Miguel Murillo Loreo  No. SIA 2180209716
 
 David Felipe Zorro Pulido   No. SIA 2179771396 
+
+Juan Jose Sanchez Vargas    No. SIA 2179786452
