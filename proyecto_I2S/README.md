@@ -76,14 +76,7 @@ Se comprobó que por cada ciclo de `i2s_lrc` (selección de canal) se generan **
 El sistema requiere un archivo binario crudo (raw binary) con el siguiente formato:  
 **PCM 16 bits, mono, 22 050 Hz.**
 
-Si el audio se escucha muy fuerte, se recomienda aplicar un filtro de volumen al convertirlo:
-
-```bash
-sudo apt install ffmpeg
-ffmpeg -i cancion.mp3 -filter:a "volume=0.6" -f s16le -ac 1 -ar 22050 -acodec pcm_s16le audio.bin
-```
-
-
+Si el audio se escucha muy fuerte, se recomienda aplicar un filtro de volumen al convertirlo.
 El sistema requiere que el archivo de audio esté en formato binario crudo (raw binary) con las siguientes especificaciones exactas: **PCM, 16 bits, Mono y 22050 Hz.**
 
 Si no se aplica el filtro de volumen, el audio digital puede sonar saturado y fuerte en el parlante.
