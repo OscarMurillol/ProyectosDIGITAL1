@@ -23,7 +23,7 @@ El proyecto integra módulos en **Verilog HDL** para la transmisión y recepció
 ---
 
 ###  Autores
-- Juan José Sánchez Vargas — SIA 2179786452  
+- Juan José Sánchez Vargas No. SIA 2179786452 CC. 1016942225
 - Oscar Miguel Murillo Loreo  No. SIA 2180209716
 - David Felipe Zorro Pulido   No. SIA 2179771396 
 
