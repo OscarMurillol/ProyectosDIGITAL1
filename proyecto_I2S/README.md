@@ -78,6 +78,7 @@ Si no se aplica el filtro de volumen, el audio digital puede sonar saturado y fu
 Para convertir un archivo de audio (ej: `cancion.mp3`) al archivo requerido (`audio.bin`), ejecute el siguiente comando en la terminal (requiere tener `ffmpeg` instalado):
 
 ```bash
+sudo apt install ffmpeg  
 ffmpeg -i cancion.mp3 -filter:a "volume=0.6" -f s16le -ac 1 -ar 22050 -acodec pcm_s16le audio.bin
 
 ```
