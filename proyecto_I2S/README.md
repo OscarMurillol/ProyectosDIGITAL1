@@ -1,6 +1,6 @@
 # 🎵 Reproductor de Audio Digital (I2S + SPI Flash) en FPGA
 
-Este proyecto consiste en la implementación de un sistema de reproducción de audio digital monoaural de 16 bits a 22.05 kHz. El sistema lee archivos de audio sin comprimir (.wav/PCM) almacenados en la memoria Flash SPI de la tarjeta FPGA y los transmite a un DAC externo (MAX98357A) utilizando el protocolo estándar I2S.
+Este proyecto consiste en la implementación de un sistema de reproducción de audio digital "mono" de 16 bits a 22.05 kHz. El sistema lee archivos de audio (.wav/mp3) en formato .bin almacenados en la memoria Flash SPI de la tarjeta FPGA y los transmite a un DAC externo (MAX98357A) utilizando el protocolo estándar I2S.
 
 **Plataforma:** FPGA Colorlight 5A-75E (Lattice ECP5)
 **Lenguaje:** Verilog HDL
