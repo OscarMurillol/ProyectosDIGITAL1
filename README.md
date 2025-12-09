@@ -1,25 +1,14 @@
-# Calculadora_Digital2025-2
-Diseño e implementación de una calculadora capaz de realizar operaciones básicas (suma, resta, multiplicación, división y raíz) en una FPGA Lattice ECP5 usando Verilog con una interfaz de control por UART para leer los resultados desde el computador.
+# Electrónica Digital I
 
-Prueba Division FPGA:
-https://youtu.be/6cxFfCsGUvk
+Este repositorio contiene los proyectos finales desarrollados para la asignatura, implementados en FPGA (Colorlight 5A-75E).
 
-Oscar Miguel Murillo Loreo  No. SIA 2180209716
+##  Proyectos Entregados
 
-David Felipe Zorro Pulido   No. SIA 2179771396 
+| Proyecto | Descripción | Enlace al proyecto |
+| :--- | :--- | :--- |
+| **🧮 Calculadora** | Calculadora de numeros enteros FPGA. | [📂 Abrir Carpeta](./CalculadoraFPGA) |
+| **🎵 Reproductor I2S** | Reproductor de audio .WAV/MP3 leyendo desde Memoria Flash SPI. | [📂 Abrir Carpeta](./proyecto_I2S) |
 
-Juan Jose Sanchez Vargas    No. SIA 2179786452
-
-# Proyecto finaL - Reproduccion de audio mediante protocolo I2S
-Diseño e implementación de un sistema capaz de **reproducir audio digital usando el protocolo I2S**, implementado en una **FPGA COLORLIGHT-5A-75E v8.2**.  
-El proyecto integra módulos en **Verilog** para la transmisión y recepción de datos de audio, junto con una interfaz de control para gestionar la reproducción.
-
- **Enlaces relacionados:**
-- [Proyecto - Reproducción de Audio I2S](./)  
-- [Simulación ](./sim)  
-- [Implementación ](./impl)  
-- [Documentación y Diagramas](./docs)  
-- [Video de demostración ](https://youtu.be/tu_link_aqui)
 
 ---
 
@@ -30,7 +19,9 @@ El proyecto integra módulos en **Verilog** para la transmisión y recepción de
 
 
 
-### Herramientas utilizadas
+### 🛠️ Herramientas Utilizadas
+
+* **Hardware:** FPGA Colorlight 5A-75E (ECP5) + DAC MAX98357A
 - Verilog HDL  
 - iVerilog  
 - GTKWave  

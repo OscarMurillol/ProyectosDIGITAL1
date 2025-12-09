@@ -1,5 +1,5 @@
 # --- DEFINICIONES DE ENTORNO ---
-.PHONY: all clean sim syn config config-flash help load-audio
+.PHONY: all clean test syn config config-flash help load-audio
 
 # 1. NOMBRE DEL MÓDULO PRINCIPAL
 top = top

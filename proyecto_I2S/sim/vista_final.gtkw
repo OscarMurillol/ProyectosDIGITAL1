@@ -1,0 +1,67 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Tue Dec  9 07:28:55 2025
+[*]
+[dumpfile] "/home/oscarm/ProyectosDIGITAL1/proyecto_I2S/sim/system_test.vcd"
+[dumpfile_mtime] "Tue Dec  9 07:03:57 2025"
+[dumpfile_size] 87546
+[savefile] "/home/oscarm/ProyectosDIGITAL1/proyecto_I2S/sim/vista_final.gtkw"
+[timestart] 0
+[size] 1920 1059
+[pos] -1 -1
+*-22.659956 205000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top_tb.
+[treeopen] top_tb.UUT.
+[treeopen] top_tb.UUT.U_FIFO.
+[sst_width] 216
+[signals_width] 134
+[sst_expanded] 1
+[sst_vpaned_height] 313
+@28
+[color] 3
+top_tb.UUT.clk
+[color] 3
+top_tb.UUT.rst_n
+[color] 3
+top_tb.UUT.cs_n
+[color] 3
+top_tb.UUT.i2s_lrc
+[color] 3
+top_tb.UUT.i2s_bclk
+[color] 3
+top_tb.UUT.i2s_din
+@24
+[color] 1
+top_tb.UUT.U_SPI.state[1:0]
+@22
+[color] 1
+top_tb.UUT.U_SPI.bit_cnt[4:0]
+[color] 1
+top_tb.UUT.U_SPI.data_out[7:0]
+@28
+[color] 1
+top_tb.UUT.U_SPI.validar
+[color] 5
+top_tb.UUT.U_ASM.flag
+@22
+[color] 5
+top_tb.UUT.U_ASM.sample[15:0]
+@28
+[color] 5
+top_tb.UUT.U_ASM.we_en
+@24
+[color] 7
+top_tb.UUT.U_FIFO.U_DATAPATH.count[10:0]
+@28
+[color] 7
+top_tb.UUT.U_FIFO.U_CONTROL.Empty
+[color] 7
+top_tb.UUT.U_FIFO.U_CONTROL.Pausa
+@24
+top_tb.UUT.U_I2S.cnt_lrc[4:0]
+@22
+top_tb.UUT.U_I2S.sreg[15:0]
+@29
+top_tb.UUT.U_I2S.strobe
+[pattern_trace] 1
+[pattern_trace] 0
