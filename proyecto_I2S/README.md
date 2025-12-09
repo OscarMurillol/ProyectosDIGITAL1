@@ -8,7 +8,7 @@ Este proyecto consiste en la implementación de un sistema de reproducción de a
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+##  Arquitectura del Sistema
 
 El diseño se ha estructurado de manera modular para garantizar la estabilidad de las señales y facilitar la depuración. A diferencia de un diseño monolítico, se separó la lógica de control del flujo de datos.
 
@@ -23,7 +23,7 @@ El diseño se ha estructurado de manera modular para garantizar la estabilidad d
 
 ---
 
-## 🛠️ Cambios de Diseño y Justificación Técnica
+##  Cambios de Diseño y Justificación Técnica
 
 Durante la fase de implementación y pruebas, se realizaron ajustes críticos respecto a los diagramas iniciales para solucionar problemas de hardware real:
 
@@ -42,7 +42,7 @@ Durante la fase de implementación y pruebas, se realizaron ajustes críticos re
 
 ---
 
-## 📸 Simulaciones y Verificación
+##  Simulaciones y Verificación
 
 Se realizaron simulaciones funcionales (`make sim`) verificando el comportamiento antes de la síntesis.
 
@@ -63,7 +63,7 @@ Se verifica la correcta relación de relojes. Por cada ciclo de `i2s_lrc` (Reloj
 
 ---
 
-## 🔌 Conexiones (Pinout)
+## 🔌Conexiones (Pinout)
 
 Las conexiones físicas se realizan en el conector J1 de la Colorlight 5A-75E:
 
@@ -77,7 +77,7 @@ Las conexiones físicas se realizan en el conector J1 de la Colorlight 5A-75E:
 
 ---
 
-## 🚀 Instrucciones de Ejecución
+##  Instrucciones de Ejecución
 
 Este proyecto está automatizado mediante un `Makefile`.
 
