@@ -1,4 +1,4 @@
-# 🎵 Reproductor de Audio Digital (I2S + SPI Flash) en FPGA
+# Reproductor de Audio Digital (I2S + SPI Flash) en FPGA
 
 Este proyecto consiste en la implementación de un sistema de reproducción de audio digital "mono" de 16 bits a 22.05 kHz. El sistema lee archivos de audio (.wav/mp3) en formato .bin almacenados en la memoria Flash SPI de la tarjeta FPGA y los transmite a un DAC externo (MAX98357A) utilizando el protocolo estándar I2S.
 
@@ -8,7 +8,7 @@ Este proyecto consiste en la implementación de un sistema de reproducción de a
 
 ---
 
-##  Arquitectura del Sistema
+## Arquitectura del Sistema
 
 El diseño se ha estructurado de manera modular para garantizar la estabilidad de las señales y facilitar la depuración. A diferencia de un diseño monolítico, se separó la lógica de control del flujo de datos.
 
@@ -23,13 +23,13 @@ El diseño se ha estructurado de manera modular para garantizar la estabilidad d
 
 ---
 
-##  Cambios de Diseño y Justificación Técnica
+## Cambios de Diseño y Justificación Técnica
 
 Durante la fase de implementación y pruebas, se realizaron ajustes críticos respecto a los diagramas iniciales para solucionar problemas de hardware real:
 
 ### 1. Implementación de Temporizador de Arranque (Start-Up Timer)
 * **Problema:** Al energizar la FPGA, se escuchaba un ruido fuerte tipo "motor" o estática.
-* **Causa:** La FPGA intentaba leer la memoria Flash inmediatamente (nanosegundos después del encendido), pero la Flash requiere un tiempo de "wake-up" interno.
+* **Causa:** La FPGA intentaba leer la memoria Flash inmediatamente, pero la Flash requiere un tiempo de "wake-up" interno.
 * **Solución:** Se implementó un temporizador en `top.v` que mantiene el sistema en espera durante **40ms** antes de activar la señal `Chip Select`. Esto eliminó el ruido y garantizó la lectura correcta de los datos.
 
 ### 2. Separación Control vs. Datapath
@@ -38,11 +38,11 @@ Durante la fase de implementación y pruebas, se realizaron ajustes críticos re
 
 ### 3. Sincronización I2S Matemática
 * Se reemplazó la generación de reloj por estados por un contador exacto (`LIMIT = 18`) derivado del reloj de 25MHz.
-* *Cálculo:* `25MHz / (22050Hz * 32bits * 2) ≈ 17.7` (Aproximado a 18 ciclos).
+* *Cálculo:* $25\text{MHz} / (22050\text{Hz} \times 32\text{bits} \times 2) \approx 17.7$ (Aproximado a 18 ciclos).
 
 ---
 
-##  Simulaciones y Verificación
+## Simulaciones y Verificación
 
 Se realizaron simulaciones funcionales (`make sim`) verificando el comportamiento antes de la síntesis.
 
@@ -63,41 +63,13 @@ Se verifica la correcta relación de relojes. Por cada ciclo de `i2s_lrc` (Reloj
 
 ---
 
-## 🔌Conexiones (Pinout)
+## Generación del Archivo de Audio (`ffmpeg`)
 
-Las conexiones físicas se realizan en el conector J1 de la Colorlight 5A-75E:
+El sistema requiere que el archivo de audio esté en formato binario crudo (raw binary) con las siguientes especificaciones exactas: **PCM, 16 bits, Mono y 22050 Hz.**
 
-| Señal | Pin FPGA | Conexión DAC (MAX98357A) | Descripción |
-| :--- | :--- | :--- | :--- |
-| **i2s_bclk** | `C4` | **BCLK** | Reloj de Bit |
-| **i2s_lrc** | `D4` | **LRC / LRCLK** | Selección de Canal (Word Select) |
-| **i2s_din** | `E4` | **DIN** | Entrada de Datos Serial |
-| **GND** | `GND` | **GND** | Tierra Común |
-| **VCC** | `5V` | **VIN** | Alimentación |
+Si no se aplica el filtro de volumen, el audio digital puede sonar saturado y fuerte en el parlante.
 
----
+Para convertir un archivo de audio (ej: `cancion.mp3`) al archivo requerido (`audio.bin`), ejecute el siguiente comando en la terminal (requiere tener `ffmpeg` instalado):
 
-##  Instrucciones de Ejecución
-
-Este proyecto está automatizado mediante un `Makefile`.
-
-1.  **Limpieza del proyecto:**
-    ```bash
-    make clean
-    ```
-
-2.  **Síntesis y Generación de Bitstream:**
-    ```bash
-    make syn
-    ```
-
-3.  **Carga del Archivo de Audio:**
-    *Importante:* Este comando desbloquea los sectores de la Flash y carga el archivo `audio.bin` en la dirección `0x200000`.
-    ```bash
-    make load-audio
-    ```
-
-4.  **Configuración de la FPGA:**
-    ```bash
-    make config
-    ```
+```bash
+ffmpeg -i cancion.mp3 -filter:a "volume=0.2" -f s16le -ac 1 -ar 22050 -acodec pcm_s16le audio.bin
