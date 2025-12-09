@@ -16,10 +16,10 @@ El proyecto integra módulos en **Verilog** para la transmisión y recepción de
 
  **Enlaces relacionados:**
 - [Proyecto - Reproducción de Audio I2S](./)  
-- [Simulación (clic aquí)](./sim)  
-- [Implementación (clic aquí)](./impl)  
-- [Documentación o Diagramas](./docs)  
-- [Video de demostración (YouTube)](https://youtu.be/tu_link_aqui)
+- [Simulación ](./sim)  
+- [Implementación ](./impl)  
+- [Documentación y Diagramas](./docs)  
+- [Video de demostración ](https://youtu.be/tu_link_aqui)
 
 ---
 
