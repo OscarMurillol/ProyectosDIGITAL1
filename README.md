@@ -19,7 +19,7 @@ Este repositorio contiene los proyectos finales desarrollados para la asignatura
 
 
 
-### 🛠️ Herramientas Utilizadas
+###  Herramientas Utilizadas
 
 * **Hardware:** FPGA Colorlight 5A-75E (ECP5) + DAC MAX98357A
 - Verilog HDL  
