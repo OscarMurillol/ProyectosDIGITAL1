@@ -11,6 +11,12 @@ Este proyecto consiste en la implementación de un sistema de reproducción de a
 ## Arquitectura del Sistema
 
 El diseño se ha estructurado de manera modular para garantizar la estabilidad de las señales y facilitar la depuración. A diferencia de un diseño monolítico, se separó la lógica de control del flujo de datos.
+### Diagrama de Bloques
+El siguiente diagrama ilustra el flujo de datos y control a nivel de módulo principal, incluyendo la señalización crítica:
+
+![Diagrama de Bloques del Sistema de Audio](./Diagramas/Topmoduleinternals.drawio.png)
+
+*(Fig 3. Estructura de alto nivel del sistema de reproducción de audio)*
 
 ### Diagrama de Bloques Simplificado:
 `SPI Flash` -> **[Lector SPI]** -> **[Ensamblador de Bytes]** -> **[FIFO]** -> **[Transmisor I2S]** -> `DAC`
