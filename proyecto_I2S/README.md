@@ -72,4 +72,73 @@ Si no se aplica el filtro de volumen, el audio digital puede sonar saturado y fu
 Para convertir un archivo de audio (ej: `cancion.mp3`) al archivo requerido (`audio.bin`), ejecute el siguiente comando en la terminal (requiere tener `ffmpeg` instalado):
 
 ```bash
-ffmpeg -i cancion.mp3 -filter:a "volume=0.2" -f s16le -ac 1 -ar 22050 -acodec pcm_s16le audio.bin
+ffmpeg -i cancion.mp3 -filter:a "volume=0.6" -f s16le -ac 1 -ar 22050 -acodec pcm_s16le audio.bin
+
+```
+
+ ## 🔌Conexiones (Pinout)
+
+
+Las conexiones físicas se realizan en el conector J1 de la Colorlight 5A-75E:
+
+
+| Señal | Pin FPGA | Conexión DAC (MAX98357A) | Descripción |
+
+| :--- | :--- | :--- | :--- |
+
+| **i2s_bclk** | `C4` | **BCLK** | Reloj de Bit |
+
+| **i2s_lrc** | `D4` | **LRC / LRCLK** | Selección de Canal (Word Select) |
+
+| **i2s_din** | `E4` | **DIN** | Entrada de Datos Serial |
+
+| **GND** | `GND` | **GND** | Tierra Común |
+
+| **VCC** | `5V` | **VIN** | Alimentación |
+
+
+---
+
+
+##  Instrucciones de Ejecución
+
+
+Este proyecto está automatizado mediante un `Makefile`.
+
+
+1.  **Limpieza del proyecto:**
+
+    ```bash
+
+    make clean
+
+    ```
+
+
+2.  **Síntesis y Generación de Bitstream:**
+
+    ```bash
+
+    make syn
+
+    ```
+
+
+3.  **Carga del Archivo de Audio:**
+
+    *Importante:* Este comando desbloquea los sectores de la Flash y carga el archivo `audio.bin` en la dirección `0x200000`.
+
+    ```bash
+
+    make load-audio
+
+    ```
+
+
+4.  **Configuración de la FPGA:**
+
+    ```bash
+
+    make config
+
+    ``` 
