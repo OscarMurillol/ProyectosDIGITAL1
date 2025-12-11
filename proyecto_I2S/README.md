@@ -157,4 +157,4 @@ Este proyecto está automatizado mediante un `Makefile`.
     ``` 
 ## Video final del prototipo funcionando
 
-https://youtu.be/m0pJglNk4Ic?si=bd356dDi5KDWL8jd
+`https://youtu.be/m0pJglNk4Ic?si=bd356dDi5KDWL8jd`
