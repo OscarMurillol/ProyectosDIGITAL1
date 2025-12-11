@@ -139,7 +139,7 @@ Este proyecto está automatizado mediante un `Makefile`.
 
 3.  **Carga del Archivo de Audio:**
 
-    *Importante:* Este comando desbloquea los sectores de la Flash y carga el archivo `audio.bin` en la dirección `0x200000`.
+    Este comando carga el archivo `audio.bin` en la dirección `0x200000`.
 
     ```bash
 
